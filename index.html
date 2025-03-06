@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Воспроизведение звука</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Нажмите на любую часть экрана!</h1>
+
+    <audio id="audio" src="sound1.mp3"></audio>
+
+    <script>
+        document.body.addEventListener('click', function() {
+            const audio = document.getElementById('audio');
+            audio.currentTime = 0; // Сбросить время воспроизведения
+            audio.play();
+        });
+    </script>
+</body>
+</html>
